@@ -1,0 +1,42 @@
+fig build
+サービスを構築または再構築する。サービスは一度構築されるとプロジェクトサービスとしてタグされる。サービスのDockerfileを変更したり構築済みのコンテンツを変更する場合はfig buildで再構築する。
+
+fig start
+既存のコンテナを起動する
+
+fig stop
+既存のコンテナを停止する
+
+fig up
+Build, (re)create, start and attach to containers for a service.
+fig up -d -> running background
+
+fig log
+コンテナのログを表示する
+
+fig ps
+      Name                    Command               State           Ports
+----------------------------------------------------------------------------------
+sample_app_db_1    /docker-entrypoint.sh postgres   Up      0.0.0.0:5432->5432/tcp
+sample_app_web_1   bin/rails server --port 30 ...   Up      0.0.0.0:3000->3000/tcp
+
+fig rm
+停止中のコンテナを削除
+
+fig run
+コンテナのサービスを起動させてコマンドを実行する
+
+For example;
+fig run web python manage.py shell
+fig run db psql -h db -U docker
+
+コンテナを起動させたくない場合は"--no-deps"を付与する
+For example;
+fig run --no-deps web python manage.py shell
+
+fig scale
+サービスで必要なコンテナの数をセットする
+service=numでコンテナの数を決める
+For expample;
+fig scale web=2 worker=3
+

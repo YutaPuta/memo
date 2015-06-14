@@ -1,0 +1,5 @@
+*** how to debug in eclipse
+1) command "activator -jvm-debug 9999 run"
+2) open eclipse and push debug
+
+

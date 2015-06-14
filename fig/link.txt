@@ -1,0 +1,8 @@
+# Home
+http://www.fig.sh
+
+# useful links
+ - Rails on Docker
+   https://robots.thoughtbot.com/rails-on-docker
+ - boot2docker + fig
+   http://dev.classmethod.jp/server-side/docker-server-side/orchestration-with-boot2docker-fig/
